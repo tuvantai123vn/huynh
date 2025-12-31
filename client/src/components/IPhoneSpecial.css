@@ -1,0 +1,162 @@
+.iphone-special-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+}
+
+.iphone-special-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 245, 0.95) 100%);
+  border-radius: 30px;
+  padding: 3rem 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 182, 193, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.iphone-special-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.iphone-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5));
+}
+
+.iphone-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #764ba2;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.iphone-message {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.iphone-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  background: rgba(255, 182, 193, 0.2);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.close-button:hover {
+  box-shadow: 0 8px 25px rgba(118, 75, 162, 0.6);
+  transform: translateY(-2px);
+}
+
+.close-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .iphone-special-card {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
+  
+  .iphone-icon {
+    font-size: 4rem;
+  }
+  
+  .iphone-title {
+    font-size: 1.5rem;
+  }
+  
+  .iphone-message {
+    font-size: 1rem;
+  }
+  
+  .feature-item {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tối ưu cho iPhone 12 Pro Max */
+@media (min-width: 428px) and (max-width: 430px) {
+  .iphone-special-card {
+    max-width: 400px;
+    padding: 3.5rem 2.5rem;
+  }
+  
+  .iphone-title {
+    font-size: 2.2rem;
+  }
+  
+  .iphone-message {
+    font-size: 1.15rem;
+  }
+}
+

@@ -1,0 +1,247 @@
+.interactive-wishes-section {
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.wish-trigger-container {
+  position: relative;
+  z-index: 10;
+}
+
+.wish-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  color: white;
+  border: none;
+  padding: 2rem 3rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.4);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.wish-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wish-button:hover {
+  transform: translateY(-3px);
+}
+
+.button-icon {
+  font-size: 2rem;
+  display: block;
+}
+
+.button-text {
+  font-size: 1.2rem;
+}
+
+.button-arrow {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.wish-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.wish-popup {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 245, 0.95) 100%);
+  border-radius: 30px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 182, 193, 0.5);
+}
+
+.close-popup {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 182, 193, 0.3);
+  border: 2px solid rgba(255, 182, 193, 0.5);
+  color: #764ba2;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-popup:hover {
+  background: rgba(255, 182, 193, 0.5);
+  transform: scale(1.1);
+}
+
+.wish-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wish-emoji {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5));
+}
+
+.wish-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #764ba2;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wish-message {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  text-align: left;
+  padding: 1.5rem;
+  background: rgba(255, 182, 193, 0.1);
+  border-radius: 15px;
+  border-left: 4px solid #764ba2;
+}
+
+.wish-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(255, 182, 193, 0.3);
+}
+
+.nav-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-button:hover {
+  box-shadow: 0 8px 25px rgba(118, 75, 162, 0.6);
+  transform: translateY(-2px);
+}
+
+.wish-counter {
+  font-size: 1rem;
+  color: #764ba2;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 182, 193, 0.2);
+  border-radius: 20px;
+}
+
+.wish-hint {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .wish-button {
+    padding: 1.5rem 2rem;
+    font-size: 1.1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .button-text {
+    font-size: 1rem;
+  }
+  
+  .wish-popup {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
+  
+  .wish-emoji {
+    font-size: 4rem;
+  }
+  
+  .wish-title {
+    font-size: 2rem;
+  }
+  
+  .wish-message {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .wish-navigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    width: 100%;
+  }
+}
+

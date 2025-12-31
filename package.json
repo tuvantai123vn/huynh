@@ -1,0 +1,19 @@
+{
+  "name": "tet-2026-love-website",
+  "version": "1.0.0",
+  "description": "Website tặng người yêu nhân dịp Tết 2026",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "cd client && npm start",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd client && npm install",
+    "build": "cd client && npm install && npm run build"
+  },
+  "keywords": ["tet", "2026", "love", "website"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+
