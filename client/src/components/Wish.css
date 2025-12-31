@@ -14,17 +14,36 @@
   max-width: 1000px;
   width: 100%;
   text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
+  margin-top: 0;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  transform: none !important;
+  display: block;
+  width: 100%;
 }
 
 .wishes-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 0;
   margin-bottom: 3rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .wish-item {
@@ -41,6 +60,8 @@
   justify-content: center;
   text-align: center;
   min-height: 180px;
+  position: relative;
+  z-index: 2;
 }
 
 .wish-item:hover {
@@ -70,6 +91,8 @@
   border-radius: 25px;
   border: 2px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
 .final-text {
