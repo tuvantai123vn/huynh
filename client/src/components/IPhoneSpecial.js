@@ -5,6 +5,10 @@ import { useContent } from '../hooks/useContent';
 import './IPhoneSpecial.css';
 
 function IPhoneSpecial() {
+  // Tắt hiển thị thông báo iPhone
+  return null;
+
+  /* Code cũ - đã tắt
   const content = useContent();
   const [deviceInfo, setDeviceInfo] = useState(null);
   const [showMessage, setShowMessage] = useState(false);

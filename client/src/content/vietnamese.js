@@ -5,7 +5,7 @@ export const vietnameseContent = {
   
   hero: {
     title: 'Chúc Mừng Năm Mới 2026',
-    subtitle: 'Gửi đến em - một người đặc biệt',
+    subtitle: 'Gửi tặng em',
     iphoneBadge: 'Được tối ưu cho iPhone 12 Pro Max của em!',
     iphoneBadgeNormal: 'Được tối ưu cho iPhone của em!'
   },
