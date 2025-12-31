@@ -29,9 +29,6 @@ export const detectDevice = () => {
   // Phát hiện iPhone nói chung (bao gồm 12 Pro Max)
   const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
   
-  // Phát hiện màn hình lớn (Pro Max thường có màn hình lớn)
-  const isLargeScreen = innerWidth >= 428 || screenWidth >= 428;
-  
   return {
     isIPhone,
     isIPhone12ProMax,
