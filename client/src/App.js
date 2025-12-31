@@ -6,7 +6,6 @@ import Hero from './components/Hero';
 import Countdown from './components/Countdown';
 import LoveMessage from './components/LoveMessage';
 import Wish from './components/Wish';
-import IPhoneSpecial from './components/IPhoneSpecial';
 import InteractiveWishes from './components/InteractiveWishes';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import './App.css';
@@ -61,7 +60,6 @@ function App() {
         transition={{ duration: 1 }}
         className="main-container"
       >
-        <IPhoneSpecial />
         <Hero />
         <Countdown />
         <InteractiveWishes />

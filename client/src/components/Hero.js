@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { detectDevice } from '../utils/deviceDetection';
 import { useContent } from '../hooks/useContent';
 import './Hero.css';
 
 function Hero() {
-  const [deviceInfo, setDeviceInfo] = useState(null);
   const content = useContent();
-
-  useEffect(() => {
-    const info = detectDevice();
-    setDeviceInfo(info);
-  }, []);
   return (
     <section className="hero">
       <motion.div
@@ -58,33 +51,6 @@ function Hero() {
         >
           {content.hero.subtitle}
         </motion.p>
-
-        {deviceInfo && (deviceInfo.isIPhone || deviceInfo.isIPhone12ProMax) && (
-          <motion.div
-            className="iphone-badge"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 1.5, type: 'spring', stiffness: 200 }}
-          >
-            <motion.span
-              animate={{
-                rotate: [0, 10, -10, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatDelay: 1
-              }}
-            >
-              📱
-            </motion.span>
-            <span className="iphone-text">
-              {deviceInfo.isIPhone12ProMax 
-                ? content.hero.iphoneBadge
-                : content.hero.iphoneBadgeNormal}
-            </span>
-          </motion.div>
-        )}
 
         <motion.div
           className="sparkles"
