@@ -5,7 +5,7 @@
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
   height: 100vh;
 }
@@ -25,12 +25,12 @@
 .main-container {
   position: relative;
   z-index: 1;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 .main-container > section {
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
 }
 
 /* Scrollbar styling */

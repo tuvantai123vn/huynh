@@ -7,7 +7,7 @@
   padding: 4rem 2rem;
   position: relative;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
 }
 
 .wish-container {
